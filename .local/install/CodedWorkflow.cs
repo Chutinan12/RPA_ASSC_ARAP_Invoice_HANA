@@ -2,7 +2,7 @@ using UiPath.CodedWorkflows;
 
 namespace RPAOACTemplate_Windows
 {
-    public class CodedWorkflow : CodedWorkflowBase
+    public partial class CodedWorkflow : CodedWorkflowBase
     {
         public CodedWorkflow()
         {
