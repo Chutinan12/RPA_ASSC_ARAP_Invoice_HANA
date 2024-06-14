@@ -5,7 +5,7 @@
     <x:Property Name="out_StrMessage" Type="OutArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1234,6326.666666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1041.6,6129.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="72">
@@ -125,7 +125,7 @@
       <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="main genarate file" sap:VirtualizedContainerService.HintSize="1053.3333333333333,6262" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence DisplayName="main genarate file" sap:VirtualizedContainerService.HintSize="1052,6064.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtMasterPostingKey">
         <Variable.Default>
@@ -149,40 +149,28 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="991.3333333333334,6151.333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="989.6,5952.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="AR process" sap:VirtualizedContainerService.HintSize="952.6666666666666,5911.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_15">
+        <Sequence DisplayName="AR process" sap:VirtualizedContainerService.HintSize="952.8,5721.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="get data Master &amp; Data" sap:VirtualizedContainerService.HintSize="890.6666666666666,3761.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence DisplayName="get data Master &amp; Data" sap:VirtualizedContainerService.HintSize="890.4,3570.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="755.3333333333334,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2">
-              <ui:LogMessage.Level>
-                <InArgument x:TypeArguments="ui:LogLevel">
-                  <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_81">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
-                </InArgument>
-              </ui:LogMessage.Level>
-              <ui:LogMessage.Message>
-                <InArgument x:TypeArguments="x:Object">
-                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_82">"Debug"</CSharpValue>
-                </InArgument>
-              </ui:LogMessage.Message>
-            </ui:LogMessage>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="755.3333333333334,92" sap2010:WorkflowViewState.IdRef="WriteLine_4">
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="755.2,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_4">
               <InArgument x:TypeArguments="x:String">
                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_71">"path master AR "+in_Config["PathMasterAR"].ToString()</CSharpValue>
               </InArgument>
             </WriteLine>
-            <ui:ForEachFolderX DisplayName="read master all company" sap:VirtualizedContainerService.HintSize="755.3333333333334,2414" sap2010:WorkflowViewState.IdRef="ForEachFolderX_1" IncludeSubFolders="False" OrderBy="NameAscFirst" SkipFoldersWithoutPermission="True">
+            <ui:ForEachFolderX DisplayName="read master all company" sap:VirtualizedContainerService.HintSize="755.2,2408" sap2010:WorkflowViewState.IdRef="ForEachFolderX_1" IncludeSubFolders="False" OrderBy="NameAscFirst" SkipFoldersWithoutPermission="True">
               <ui:ForEachFolderX.Body>
                 <ActivityAction x:TypeArguments="si:DirectoryInfo, x:Int32">
                   <ActivityAction.Argument1>
@@ -191,13 +179,13 @@
                   <ActivityAction.Argument2>
                     <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                   </ActivityAction.Argument2>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="721.3333333333334,2144" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="721.6,2144.8" sap2010:WorkflowViewState.IdRef="Sequence_31">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If sap:VirtualizedContainerService.HintSize="659.3333333333334,2033.3333333333333" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If sap:VirtualizedContainerService.HintSize="659.2,2032.8" sap2010:WorkflowViewState.IdRef="If_2">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_62">CurrentFolder.ToString().ToLower().Contains("masterar")</CSharpValue>
