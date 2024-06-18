@@ -12,6 +12,7 @@
       "Path": "Class/sqARInvoice.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strDebugdtData&Sequence_3",
         "dtMasterPostingKey&Sequence_3",
         "dtMasterRef&Sequence_3",
         "dtDataUpload&Sequence_3",
@@ -91,6 +92,7 @@
       "Path": "Class/sqAPInvoice.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strDebugdtData&Sequence_3",
         "dtMasterPostingKey&Sequence_3",
         "dtMasterRef&Sequence_3",
         "dtDataUpload&Sequence_3",
@@ -109,6 +111,7 @@
       "Path": "Class/sqZFI05_UploadData.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strDebugdtData&Sequence_1",
         "dtResult&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
@@ -172,6 +175,7 @@
       "Path": "Class/sqGroupSendEmailByCompany.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strDebugdtData&Sequence_2",
         "dtData&TryCatch_1",
         "drGroupCompany&Sequence_2",
         "dtGroup&Sequence_3"
@@ -211,6 +215,28 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SetTransactionStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "QueueRetry&Sequence_8",
+        "ScreenshotPath&Sequence_8"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_BusinessException",
+        "in_Config",
+        "in_TransactionItem",
+        "io_RetryNumber",
+        "io_TransactionNumber",
+        "in_TransactionField1",
+        "in_TransactionField2",
+        "in_TransactionID",
+        "in_SystemException",
+        "io_ConsecutiveSystemExceptions"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }

@@ -5,7 +5,7 @@
     <x:Property Name="out_StrMessage" Type="OutArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>1041.6,6129.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1227.3333333333333,7624.666666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="72">
@@ -123,9 +123,10 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
       <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
       <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="main genarate file" sap:VirtualizedContainerService.HintSize="1052,6064.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence DisplayName="main genarate file" sap:VirtualizedContainerService.HintSize="1053.3333333333333,7560" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtMasterPostingKey">
         <Variable.Default>
@@ -143,34 +144,35 @@
         </Variable.Default>
       </Variable>
       <Variable x:TypeArguments="sd:DataTable" Name="dtData" />
+      <Variable x:TypeArguments="x:String" Name="strDebugdtData" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="989.6,5952.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="991.3333333333334,7449.333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="AR process" sap:VirtualizedContainerService.HintSize="952.8,5721.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
+        <Sequence DisplayName="AR process" sap:VirtualizedContainerService.HintSize="952.6666666666666,7209.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_15">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="get data Master &amp; Data" sap:VirtualizedContainerService.HintSize="890.4,3570.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence DisplayName="get data Master &amp; Data" sap:VirtualizedContainerService.HintSize="890.6666666666666,4535.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="755.2,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_4">
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="756.6666666666666,92" sap2010:WorkflowViewState.IdRef="WriteLine_4">
               <InArgument x:TypeArguments="x:String">
                 <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_71">"path master AR "+in_Config["PathMasterAR"].ToString()</CSharpValue>
               </InArgument>
             </WriteLine>
-            <ui:ForEachFolderX DisplayName="read master all company" sap:VirtualizedContainerService.HintSize="755.2,2408" sap2010:WorkflowViewState.IdRef="ForEachFolderX_1" IncludeSubFolders="False" OrderBy="NameAscFirst" SkipFoldersWithoutPermission="True">
+            <ui:ForEachFolderX DisplayName="read master all company" sap:VirtualizedContainerService.HintSize="756.6666666666666,3356.6666666666665" sap2010:WorkflowViewState.IdRef="ForEachFolderX_1" IncludeSubFolders="False" OrderBy="NameAscFirst" SkipFoldersWithoutPermission="True">
               <ui:ForEachFolderX.Body>
                 <ActivityAction x:TypeArguments="si:DirectoryInfo, x:Int32">
                   <ActivityAction.Argument1>
@@ -179,13 +181,13 @@
                   <ActivityAction.Argument2>
                     <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                   </ActivityAction.Argument2>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="721.6,2144.8" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="722.6666666666666,3086.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_31">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <If sap:VirtualizedContainerService.HintSize="659.2,2032.8" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If sap:VirtualizedContainerService.HintSize="660.6666666666666,2976" sap2010:WorkflowViewState.IdRef="If_2">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_62">CurrentFolder.ToString().ToLower().Contains("masterar")</CSharpValue>
@@ -198,13 +200,13 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="625.6,1849.6" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                        <Sequence sap:VirtualizedContainerService.HintSize="626.6666666666666,2792" sap2010:WorkflowViewState.IdRef="Sequence_29">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:ForEachFileX DisplayName="For Each File in Folder" sap:VirtualizedContainerService.HintSize="582.4,1760" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="True">
+                          <ui:ForEachFileX DisplayName="For Each File in Folder" sap:VirtualizedContainerService.HintSize="584.6666666666666,2704.6666666666665" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="True">
                             <ui:ForEachFileX.Body>
                               <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
                                 <ActivityAction.Argument1>
@@ -213,7 +215,7 @@
                                 <ActivityAction.Argument2>
                                   <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                                 </ActivityAction.Argument2>
-                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="548.8,1495.2" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="550.6666666666666,2434.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_28">
                                   <Sequence.Variables>
                                     <Variable x:TypeArguments="sd:DataTable" Name="dtTemp" />
                                   </Sequence.Variables>
@@ -223,16 +225,16 @@
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="486.4,1383.2" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="488.6666666666667,2324" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                                     <TryCatch.Try>
-                                      <Sequence sap:VirtualizedContainerService.HintSize="449.6,1152" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                                      <Sequence sap:VirtualizedContainerService.HintSize="450,2084.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_36">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ueab:ExcelProcessScopeX FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayAlerts="False" DisplayName="Excel Process Scope" ExistingProcessAction="ForceKill" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_5" ShowExcelWindow="False">
+                                        <ueab:ExcelProcessScopeX FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayAlerts="False" DisplayName="Excel Process Scope" ExistingProcessAction="ForceKill" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_5" ShowExcelWindow="False">
                                           <ueab:ExcelProcessScopeX.Body>
                                             <ActivityAction x:TypeArguments="ui:IExcelProcess">
                                               <ActivityAction.Argument>
@@ -280,7 +282,7 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </ueab:ExcelProcessScopeX>
-                                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+                                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="CommentOut_8">
                                           <ui:CommentOut.Body>
                                             <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,200" sap2010:WorkflowViewState.IdRef="Sequence_40">
                                               <sap:WorkflowViewStateService.ViewState>
@@ -309,7 +311,7 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </ui:CommentOut>
-                                        <ui:MergeDataTable DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="387.2,134.4" sap2010:WorkflowViewState.IdRef="MergeDataTable_1" MissingSchemaAction="Add">
+                                        <ui:MergeDataTable DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="388,136.66666666666666" sap2010:WorkflowViewState.IdRef="MergeDataTable_1" MissingSchemaAction="Add">
                                           <ui:MergeDataTable.Destination>
                                             <InOutArgument x:TypeArguments="sd:DataTable">
                                               <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_14">dtMasterPostingKey</CSharpReference>
@@ -321,7 +323,31 @@
                                             </InArgument>
                                           </ui:MergeDataTable.Source>
                                         </ui:MergeDataTable>
-                                        <ueab:ExcelProcessScopeX FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayAlerts="False" DisplayName="Excel Process Scope" ExistingProcessAction="ForceKill" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_6" ShowExcelWindow="False">
+                                        <ui:OutputDataTable DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="388,82" sap2010:WorkflowViewState.IdRef="OutputDataTable_1">
+                                          <ui:OutputDataTable.DataTable>
+                                            <InArgument x:TypeArguments="sd:DataTable">
+                                              <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_81">dtMasterPostingKey</CSharpValue>
+                                            </InArgument>
+                                          </ui:OutputDataTable.DataTable>
+                                          <ui:OutputDataTable.Text>
+                                            <OutArgument x:TypeArguments="x:String">
+                                              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_28">strDebugdtData</CSharpReference>
+                                            </OutArgument>
+                                          </ui:OutputDataTable.Text>
+                                        </ui:OutputDataTable>
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_2">
+                                          <ui:LogMessage.Level>
+                                            <InArgument x:TypeArguments="ui:LogLevel">
+                                              <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_82">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
+                                            </InArgument>
+                                          </ui:LogMessage.Level>
+                                          <ui:LogMessage.Message>
+                                            <InArgument x:TypeArguments="x:Object">
+                                              <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_83">"Log dtMasterPostingKey :" + strDebugdtData</CSharpValue>
+                                            </InArgument>
+                                          </ui:LogMessage.Message>
+                                        </ui:LogMessage>
+                                        <ueab:ExcelProcessScopeX FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayAlerts="False" DisplayName="Excel Process Scope" ExistingProcessAction="ForceKill" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_6" ShowExcelWindow="False">
                                           <ueab:ExcelProcessScopeX.Body>
                                             <ActivityAction x:TypeArguments="ui:IExcelProcess">
                                               <ActivityAction.Argument>
@@ -369,7 +395,7 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </ueab:ExcelProcessScopeX>
-                                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+                                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="CommentOut_9">
                                           <ui:CommentOut.Body>
                                             <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,200" sap2010:WorkflowViewState.IdRef="Sequence_42">
                                               <sap:WorkflowViewStateService.ViewState>
@@ -398,7 +424,7 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </ui:CommentOut>
-                                        <ui:MergeDataTable DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="387.2,134.4" sap2010:WorkflowViewState.IdRef="MergeDataTable_2" MissingSchemaAction="Add">
+                                        <ui:MergeDataTable DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="388,136.66666666666666" sap2010:WorkflowViewState.IdRef="MergeDataTable_2" MissingSchemaAction="Add">
                                           <ui:MergeDataTable.Destination>
                                             <InOutArgument x:TypeArguments="sd:DataTable">
                                               <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">dtMasterRef</CSharpReference>
@@ -410,7 +436,31 @@
                                             </InArgument>
                                           </ui:MergeDataTable.Source>
                                         </ui:MergeDataTable>
-                                        <ueab:ExcelProcessScopeX FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayAlerts="False" DisplayName="Excel Process Scope" ExistingProcessAction="ForceKill" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_7" ShowExcelWindow="False">
+                                        <ui:OutputDataTable DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="388,82" sap2010:WorkflowViewState.IdRef="OutputDataTable_3">
+                                          <ui:OutputDataTable.DataTable>
+                                            <InArgument x:TypeArguments="sd:DataTable">
+                                              <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_87">dtMasterRef</CSharpValue>
+                                            </InArgument>
+                                          </ui:OutputDataTable.DataTable>
+                                          <ui:OutputDataTable.Text>
+                                            <OutArgument x:TypeArguments="x:String">
+                                              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_29">strDebugdtData</CSharpReference>
+                                            </OutArgument>
+                                          </ui:OutputDataTable.Text>
+                                        </ui:OutputDataTable>
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_4">
+                                          <ui:LogMessage.Level>
+                                            <InArgument x:TypeArguments="ui:LogLevel">
+                                              <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_85">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
+                                            </InArgument>
+                                          </ui:LogMessage.Level>
+                                          <ui:LogMessage.Message>
+                                            <InArgument x:TypeArguments="x:Object">
+                                              <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_88">"Log dtMasterRef :" + strDebugdtData</CSharpValue>
+                                            </InArgument>
+                                          </ui:LogMessage.Message>
+                                        </ui:LogMessage>
+                                        <ueab:ExcelProcessScopeX FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayAlerts="False" DisplayName="Excel Process Scope" ExistingProcessAction="ForceKill" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_7" ShowExcelWindow="False">
                                           <ueab:ExcelProcessScopeX.Body>
                                             <ActivityAction x:TypeArguments="ui:IExcelProcess">
                                               <ActivityAction.Argument>
@@ -458,7 +508,7 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </ueab:ExcelProcessScopeX>
-                                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="387.2,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_10">
+                                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="CommentOut_10">
                                           <ui:CommentOut.Body>
                                             <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,200" sap2010:WorkflowViewState.IdRef="Sequence_44">
                                               <sap:WorkflowViewStateService.ViewState>
@@ -487,7 +537,7 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </ui:CommentOut>
-                                        <ui:MergeDataTable DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="387.2,134.4" sap2010:WorkflowViewState.IdRef="MergeDataTable_3" MissingSchemaAction="Add">
+                                        <ui:MergeDataTable DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="388,136.66666666666666" sap2010:WorkflowViewState.IdRef="MergeDataTable_3" MissingSchemaAction="Add">
                                           <ui:MergeDataTable.Destination>
                                             <InOutArgument x:TypeArguments="sd:DataTable">
                                               <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">dtDataUpload</CSharpReference>
@@ -499,10 +549,34 @@
                                             </InArgument>
                                           </ui:MergeDataTable.Source>
                                         </ui:MergeDataTable>
+                                        <ui:OutputDataTable DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="388,82" sap2010:WorkflowViewState.IdRef="OutputDataTable_5">
+                                          <ui:OutputDataTable.DataTable>
+                                            <InArgument x:TypeArguments="sd:DataTable">
+                                              <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_89">dtDataUpload</CSharpValue>
+                                            </InArgument>
+                                          </ui:OutputDataTable.DataTable>
+                                          <ui:OutputDataTable.Text>
+                                            <OutArgument x:TypeArguments="x:String">
+                                              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_30">strDebugdtData</CSharpReference>
+                                            </OutArgument>
+                                          </ui:OutputDataTable.Text>
+                                        </ui:OutputDataTable>
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_6">
+                                          <ui:LogMessage.Level>
+                                            <InArgument x:TypeArguments="ui:LogLevel">
+                                              <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_90">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
+                                            </InArgument>
+                                          </ui:LogMessage.Level>
+                                          <ui:LogMessage.Message>
+                                            <InArgument x:TypeArguments="x:Object">
+                                              <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_91">"Log dtDataUpload :" + strDebugdtData</CSharpValue>
+                                            </InArgument>
+                                          </ui:LogMessage.Message>
+                                        </ui:LogMessage>
                                       </Sequence>
                                     </TryCatch.Try>
                                     <TryCatch.Catches>
-                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="452.8,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="454.6666666666667,22" sap2010:WorkflowViewState.IdRef="Catch`1_3">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -513,7 +587,7 @@
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                           </ActivityAction.Argument>
-                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error">
+                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error">
                                             <ui:LogMessage.Message>
                                               <InArgument x:TypeArguments="x:Object">
                                                 <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_73">" read master " + CurrentFile.ToString() + " " + exception.Message</CSharpValue>
@@ -566,37 +640,37 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ForEachFolderX>
-            <ueab:ExcelProcessScopeX FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayAlerts="False" DisplayName="Excel Process Scope" ExistingProcessAction="ForceKill" sap:VirtualizedContainerService.HintSize="755.2,880" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1" ShowExcelWindow="False">
+            <ueab:ExcelProcessScopeX FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayAlerts="False" DisplayName="Excel Process Scope" ExistingProcessAction="ForceKill" sap:VirtualizedContainerService.HintSize="756.6666666666666,896" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1" ShowExcelWindow="False">
               <ueab:ExcelProcessScopeX.Body>
                 <ActivityAction x:TypeArguments="ui:IExcelProcess">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="601.6,793.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="602,808.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="539.2,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_5">
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="540,92" sap2010:WorkflowViewState.IdRef="WriteLine_5">
                       <InArgument x:TypeArguments="x:String">
                         <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_70">"path process " + in_Config["FileProcessInput"].ToString()</CSharpValue>
                       </InArgument>
                     </WriteLine>
-                    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" AutoSave="False" CreateNewFile="False" DisplayName="Use Excel Data" sap:VirtualizedContainerService.HintSize="539.2,551.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None">
+                    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" AutoSave="False" CreateNewFile="False" DisplayName="Use Excel Data" sap:VirtualizedContainerService.HintSize="540,566" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None">
                       <ueab:ExcelApplicationCard.Body>
                         <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="505.6,281.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="506,285.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="443.2,169.6" sap2010:WorkflowViewState.IdRef="ReadRangeX_4" ReadFormatting="DisplayValue">
+                            <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="444,174.66666666666666" sap2010:WorkflowViewState.IdRef="ReadRangeX_4" ReadFormatting="DisplayValue">
                               <ueab:ReadRangeX.Range>
                                 <InArgument x:TypeArguments="ue:IReadRangeRef">
                                   <CSharpValue x:TypeArguments="ue:IReadRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">Excel.Sheet["Input-output"]</CSharpValue>
@@ -634,20 +708,20 @@
               </sap:WorkflowViewStateService.ViewState>
             </ueab:ExcelProcessScopeX>
           </Sequence>
-          <Sequence DisplayName="gen file upload &amp; upload" sap:VirtualizedContainerService.HintSize="890.4,1876" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="gen file upload &amp; upload" sap:VirtualizedContainerService.HintSize="890.6666666666666,2400" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="828,1764" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="793.3333333333334,2289.3333333333335" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="794.4,1647.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="759.3333333333334,2099.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="strFileName" />
                       <Variable x:TypeArguments="x:String" Name="strMessage">
@@ -661,7 +735,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="732,1535.2" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="717.3333333333334,2012" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -669,14 +743,14 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <TryCatch.Try>
-                        <Sequence sap:VirtualizedContainerService.HintSize="632,1304" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                        <Sequence sap:VirtualizedContainerService.HintSize="678.6666666666666,1772.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_16">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <If sap2010:Annotation.AnnotationText="CurrentRow[&quot;araccept&quot;].ToString().ToLower().Trim() == &quot;accept&quot; &#xA;&amp;&amp; CurrentRow[&quot;apaccept&quot;].ToString().ToLower().Trim() == &quot;accept&quot; &#xA;&amp;&amp; !CurrentRow[&quot;Reference&quot;].ToString().Trim().StartsWith(&quot;2000&quot;)&#xA;&amp;&amp; DateTime.ParseExact(CurrentRow[&quot;expireDate&quot;].ToString(),&quot;dd.MM.yyyy&quot;,System.Globalization.CultureInfo.InvariantCulture) &gt; DateTime.Now" sap:VirtualizedContainerService.HintSize="569.6,1192" sap2010:WorkflowViewState.IdRef="If_1">
+                          <If sap2010:Annotation.AnnotationText="CurrentRow[&quot;araccept&quot;].ToString().ToLower().Trim() == &quot;accept&quot; &#xA;&amp;&amp; CurrentRow[&quot;apaccept&quot;].ToString().ToLower().Trim() == &quot;accept&quot; &#xA;&amp;&amp; !CurrentRow[&quot;Reference&quot;].ToString().Trim().StartsWith(&quot;2000&quot;)&#xA;&amp;&amp; DateTime.ParseExact(CurrentRow[&quot;expireDate&quot;].ToString(),&quot;dd.MM.yyyy&quot;,System.Globalization.CultureInfo.InvariantCulture) &gt; DateTime.Now" sap:VirtualizedContainerService.HintSize="616.6666666666666,1662" sap2010:WorkflowViewState.IdRef="If_1">
                             <If.Condition>
                               <InArgument x:TypeArguments="x:Boolean">
                                 <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_67" xml:space="preserve">CurrentRow["araccept"].ToString().ToLower().Trim() == "accept" &amp;&amp; CurrentRow["apaccept"].ToString().ToLower().Trim() == "accept" 
@@ -692,21 +766,21 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <If.Then>
-                              <Sequence DisplayName="upload" sap:VirtualizedContainerService.HintSize="536,916.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                              <Sequence DisplayName="upload" sap:VirtualizedContainerService.HintSize="582.6666666666666,1302.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_19">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Sequence DisplayName="gen file" sap:VirtualizedContainerService.HintSize="492.8,641.6" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                <Sequence DisplayName="gen file" sap:VirtualizedContainerService.HintSize="540.6666666666666,966" sap2010:WorkflowViewState.IdRef="Sequence_17">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="430.4,101.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.6666666666667,117.33333333333333" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                                     <ui:MultipleAssign.AssignOperations>
                                       <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -724,12 +798,12 @@
                                       </scg:List>
                                     </ui:MultipleAssign.AssignOperations>
                                   </ui:MultipleAssign>
-                                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="430.4,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_1">
+                                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="478.6666666666667,92" sap2010:WorkflowViewState.IdRef="WriteLine_1">
                                     <InArgument x:TypeArguments="x:String">
                                       <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_44">"start " + strFileName</CSharpValue>
                                     </InArgument>
                                   </WriteLine>
-                                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="try{&#xA;&#x9;dtUpload.Clear();&#xA;&#x9;DataTable dtDistinct = dtPostingKey.AsEnumerable().Distinct(System.Data.DataRowComparer.Default).ToList().CopyToDataTable();&#xA;&#x9;&#xA;&#x9;//Console.WriteLine( &quot;count &quot; + dtPostingKey.Rows.Count.ToString() +&quot; table distinct  &quot; + ddd.Rows.Count.ToString() );&#xA;&#x9;var drPostingKey = dtDistinct.Select(&quot;Contract_no ='&quot;+ dr[&quot;Contract_no&quot;].ToString() +&quot;'&quot;);&#xA;&#x9;var listRef = dtRef.Select(&quot;Contract_no ='&quot;+ dr[&quot;Contract_no&quot;].ToString() +&quot;'&quot;);&#xA;&#x9;&#xA;&#x9;List&lt;DataRow&gt; drRef = listRef.ToList();&#xA;&#x9;&#xA;&#x9;if( drPostingKey.Count() &gt; 0 &amp;&amp; drRef.Count() &gt; 0 )&#xA;&#x9;{&#xA;&#x9;&#x9;int index = 0;&#xA;&#x9;&#x9;foreach (DataRow row in drPostingKey.ToList())&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;DataRow drUpload = dtUpload.NewRow();&#xA;&#x9;&#x9;&#x9;drUpload[&quot;SPET&quot;]=&quot;1&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BLDAT&quot;]= new DateTime(DateTime.Now.Year,DateTime.Now.Month,1).ToString(&quot;dd.MM.yyyy&quot;);&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BLART&quot;]=&quot;DA&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BUKRS&quot;]=drRef[0][&quot;Company Code&quot;].ToString();&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BUDAT&quot;]=new DateTime(DateTime.Now.Year,DateTime.Now.Month,1).ToString(&quot;dd.MM.yyyy&quot;);&#xA;&#x9;&#x9;&#x9;drUpload[&quot;MONAT&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;WAERS&quot;]=drRef[0][&quot;Currency Key&quot;].ToString();&#xA;&#x9;&#x9;&#x9;drUpload[&quot;KURSF&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;XBLNR&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BKTXT&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BKPF-BRNCH&quot;]=drRef[0][&quot;Business  Place&quot;].ToString();&#xA;&#x9;&#x9;&#x9;drUpload[&quot;NEWBS&quot;]=row[&quot;Posting_Key&quot;].ToString();&#xA;&#x9;&#x9;&#x9;drUpload[&quot;NEWKO&quot;]=row[&quot;Account&quot;].ToString();&#xA;&#x9;&#x9;&#x9;drUpload[&quot;WRBTR&quot;]=&quot;\&quot;&quot; + row[&quot;Amount_DC&quot;].ToString().Trim() +&quot;\&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;ZTERM&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;ZFBDT&quot;]=new DateTime(DateTime.Now.Year,DateTime.Now.Month,1).ToString(&quot;dd.MM.yyyy&quot;);&#xA;&#x9;&#x9;&#x9;drUpload[&quot;ZLSPR&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;ZLSCH&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;KIDNO&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;ZUONR&quot;]= row[&quot;Assignment number&quot;].ToString();&#xA;&#x9;&#x9;&#x9;drUpload[&quot;SGTXT&quot;]= row[&quot;Item Text&quot;].ToString().Contains(&quot;**&quot;) ? row[&quot;Item Text&quot;].ToString().Replace(&quot;**&quot; , DateTime.Now.ToString(&quot;MM/yyyy&quot;) )   : row[&quot;Item Text&quot;].ToString() + &quot; &quot; + DateTime.Now.ToString(&quot;MM/yyyy&quot;);&#xA;&#x9;&#x9;&#x9;drUpload[&quot;XREF1&quot;]=drRef[0][&quot;Reference_key1&quot;].ToString();&#xA;&#x9;&#x9;&#x9;drUpload[&quot;XREF2&quot;]=drRef[0][&quot;Reference_key2&quot;].ToString();&#xA;&#x9;&#x9;&#x9;drUpload[&quot;XREF3&quot;]= (index==0)? &quot;&quot; : drRef[0][&quot;Reference_key3&quot;].ToString() ;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;NEWUM&quot;]=(index==0)? drRef[0][&quot;SpecialGLCode&quot;].ToString() : &quot;&quot; ;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;VBUND&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;VALUT&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;KOSTL&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;AUFNR&quot;]=(index==0)? &quot;&quot; : row[&quot;Order_number&quot;].ToString();&#xA;&#x9;&#x9;&#x9;drUpload[&quot;PRCTR&quot;]= row[&quot;Profit Center&quot;].ToString() ;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;DMBOTR&quot;]= &quot;\&quot;&quot; + row[&quot;Amount_DC&quot;].ToString().Trim() +&quot;\&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;FWBAS&quot;]=  &quot;\&quot;&quot;+row[&quot;Tax Base&quot;].ToString().Trim() +&quot;\&quot;&quot;;//(index == drPostingKey.Count()-1)? decimal.Parse( drPostingKey[0][&quot;Amount_DC&quot;].ToString() ) - decimal.Parse( drPostingKey[drPostingKey.Count()-1][&quot;Amount_DC&quot;].ToString()) : &quot;&quot; ;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;MWSKZ&quot;]=drRef[0][&quot;Tax on Sales/Purchases Code&quot;].ToString();&#xA;&#x9;&#x9;&#x9;drUpload[&quot;XMWST&quot;]=(index == drPostingKey.Count()-1)? &quot;X&quot; : &quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;XSTBA&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;ACCIT_WT-WITHT&quot;]=(index==0)? drRef[0][&quot;withholding_tax_type&quot;].ToString() : &quot;&quot; ;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;ACCIT_WT-WT_WITHCD&quot;]=(index==0)? drRef[0][&quot;Withholding_tax_code&quot;].ToString() : &quot;&quot; ;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;ACCIT_WT-WT_QSSHB&quot;]=(index==0)? &quot;\&quot;&quot;+drRef[0][&quot;Withholding_tax_base&quot;].ToString().Trim() + &quot;\&quot;&quot; : &quot;&quot; ;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;ACCIT_WT-WT_QBUIHB&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;ACCIT_WT-WITHT1&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;ACCIT_WT-WT_WITHCD1&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;ACCIT_WT-WT_QSSHB1&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;ACCIT_WT-WT_QBUIHB1&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;EMPFB&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;REGUL&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BSEC-NAME1&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BSEC-NAME2&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BSEC-NAME3&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BSEC-NAME4&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BSEC-STRAS&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BSEC-ORT01&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BSEC-PSTLZ&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BSEC-LAND1&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BSEC-SPRAS&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BSEC-STCD1&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BSEC-STCD2&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BSEC-J_1KFTBUS&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;WERKS&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;MATNR&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;MENGE&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;MEINS&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;GSBER&quot;]=row[&quot;businessArea&quot;].ToString();&#xA;&#x9;&#x9;&#x9;drUpload[&quot;SEGMENT&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;XREF1_HD&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;XREF2_HD&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BVTYP&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;if(dtUpload.Columns.Contains(&quot;LongText&quot;) &amp;&amp; row.Table.Columns.Contains(&quot;LongText&quot;) )&#xA;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;drUpload[&quot;LongText&quot;]=row[&quot;LongText&quot;].ToString();&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;dtUpload.Rows.Add(drUpload);&#xA;&#x9;&#x9;&#x9;index++;&#xA;&#x9;&#x9;}&#xA;&#x9;}else{&#xA;&#x9;&#x9;throw new Exception(&quot;can't find data Contract No &quot; + dr[&quot;Contract_no&quot;].ToString());&#xA;&#x9;}&#xA;&#x9;&#xA;}&#xA;catch(Exception ex)&#xA;{&#xA;&#x9;Console.WriteLine(ex.Message);&#xA;&#x9;throw new Exception(&quot;Genarate file &quot; + dr[&quot;Contract_no&quot;].ToString() + &quot; error &quot; + ex.Message);&#xA;}" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="430.4,164.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+                                  <ui:InvokeCode ContinueOnError="{x:Null}" Code="try{&#xA;&#x9;dtUpload.Clear();&#xA;&#x9;DataTable dtDistinct = dtPostingKey.AsEnumerable().Distinct(System.Data.DataRowComparer.Default).ToList().CopyToDataTable();&#xA;&#x9;&#xA;&#x9;//Console.WriteLine( &quot;count &quot; + dtPostingKey.Rows.Count.ToString() +&quot; table distinct  &quot; + ddd.Rows.Count.ToString() );&#xA;&#x9;var drPostingKey = dtDistinct.Select(&quot;Contract_no ='&quot;+ dr[&quot;Contract_no&quot;].ToString() +&quot;'&quot;);&#xA;&#x9;var listRef = dtRef.Select(&quot;Contract_no ='&quot;+ dr[&quot;Contract_no&quot;].ToString() +&quot;'&quot;);&#xA;&#x9;&#xA;&#x9;List&lt;DataRow&gt; drRef = listRef.ToList();&#xA;&#x9;&#xA;&#x9;if( drPostingKey.Count() &gt; 0 &amp;&amp; drRef.Count() &gt; 0 )&#xA;&#x9;{&#xA;&#x9;&#x9;int index = 0;&#xA;&#x9;&#x9;foreach (DataRow row in drPostingKey.ToList())&#xA;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;DataRow drUpload = dtUpload.NewRow();&#xA;&#x9;&#x9;&#x9;drUpload[&quot;SPET&quot;]=&quot;1&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BLDAT&quot;]= new DateTime(DateTime.Now.Year,DateTime.Now.Month,1).ToString(&quot;dd.MM.yyyy&quot;);&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BLART&quot;]=&quot;DA&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BUKRS&quot;]=drRef[0][&quot;Company Code&quot;].ToString();&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BUDAT&quot;]=new DateTime(DateTime.Now.Year,DateTime.Now.Month,1).ToString(&quot;dd.MM.yyyy&quot;);&#xA;&#x9;&#x9;&#x9;drUpload[&quot;MONAT&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;WAERS&quot;]=drRef[0][&quot;Currency Key&quot;].ToString();&#xA;&#x9;&#x9;&#x9;drUpload[&quot;KURSF&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;XBLNR&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BKTXT&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BKPF-BRNCH&quot;]=drRef[0][&quot;Business  Place&quot;].ToString();&#xA;&#x9;&#x9;&#x9;drUpload[&quot;NEWBS&quot;]=row[&quot;Posting_Key&quot;].ToString();&#xA;&#x9;&#x9;&#x9;drUpload[&quot;NEWKO&quot;]=row[&quot;Account&quot;].ToString();&#xA;&#x9;&#x9;&#x9;drUpload[&quot;WRBTR&quot;]=&quot;\&quot;&quot; + row[&quot;Amount_DC&quot;].ToString().Trim() +&quot;\&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;ZTERM&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;ZFBDT&quot;]=new DateTime(DateTime.Now.Year,DateTime.Now.Month,1).ToString(&quot;dd.MM.yyyy&quot;);&#xA;&#x9;&#x9;&#x9;drUpload[&quot;ZLSPR&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;ZLSCH&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;KIDNO&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;ZUONR&quot;]= row[&quot;Assignment number&quot;].ToString();&#xA;&#x9;&#x9;&#x9;drUpload[&quot;SGTXT&quot;]= row[&quot;Item Text&quot;].ToString().Contains(&quot;**&quot;) ? row[&quot;Item Text&quot;].ToString().Replace(&quot;**&quot; , DateTime.Now.ToString(&quot;MM/yyyy&quot;) )   : row[&quot;Item Text&quot;].ToString() + &quot; &quot; + DateTime.Now.ToString(&quot;MM/yyyy&quot;);&#xA;&#x9;&#x9;&#x9;drUpload[&quot;XREF1&quot;]=drRef[0][&quot;Reference_key1&quot;].ToString();&#xA;&#x9;&#x9;&#x9;drUpload[&quot;XREF2&quot;]=drRef[0][&quot;Reference_key2&quot;].ToString();&#xA;&#x9;&#x9;&#x9;drUpload[&quot;XREF3&quot;]= (index==0)? &quot;&quot; : drRef[0][&quot;Reference_key3&quot;].ToString() ;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;NEWUM&quot;]=(index==0)? drRef[0][&quot;SpecialGLCode&quot;].ToString() : &quot;&quot; ;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;VBUND&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;VALUT&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;KOSTL&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;AUFNR&quot;]=(index==0)? &quot;&quot; : row[&quot;Order_number&quot;].ToString();&#xA;&#x9;&#x9;&#x9;drUpload[&quot;PRCTR&quot;]= row[&quot;Profit Center&quot;].ToString() ;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;DMBOTR&quot;]= &quot;\&quot;&quot; + row[&quot;Amount_DC&quot;].ToString().Trim() +&quot;\&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;FWBAS&quot;]=  &quot;\&quot;&quot;+row[&quot;Tax Base&quot;].ToString().Trim() +&quot;\&quot;&quot;;//(index == drPostingKey.Count()-1)? decimal.Parse( drPostingKey[0][&quot;Amount_DC&quot;].ToString() ) - decimal.Parse( drPostingKey[drPostingKey.Count()-1][&quot;Amount_DC&quot;].ToString()) : &quot;&quot; ;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;MWSKZ&quot;]=drRef[0][&quot;Tax on Sales/Purchases Code&quot;].ToString();&#xA;&#x9;&#x9;&#x9;drUpload[&quot;XMWST&quot;]=(index == drPostingKey.Count()-1)? &quot;X&quot; : &quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;XSTBA&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;ACCIT_WT-WITHT&quot;]=(index==0)? drRef[0][&quot;withholding_tax_type&quot;].ToString() : &quot;&quot; ;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;ACCIT_WT-WT_WITHCD&quot;]=(index==0)? drRef[0][&quot;Withholding_tax_code&quot;].ToString() : &quot;&quot; ;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;ACCIT_WT-WT_QSSHB&quot;]=(index==0)? &quot;\&quot;&quot;+drRef[0][&quot;Withholding_tax_base&quot;].ToString().Trim() + &quot;\&quot;&quot; : &quot;&quot; ;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;ACCIT_WT-WT_QBUIHB&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;ACCIT_WT-WITHT1&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;ACCIT_WT-WT_WITHCD1&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;ACCIT_WT-WT_QSSHB1&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;ACCIT_WT-WT_QBUIHB1&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;EMPFB&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;REGUL&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BSEC-NAME1&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BSEC-NAME2&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BSEC-NAME3&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BSEC-NAME4&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BSEC-STRAS&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BSEC-ORT01&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BSEC-PSTLZ&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BSEC-LAND1&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BSEC-SPRAS&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BSEC-STCD1&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BSEC-STCD2&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BSEC-J_1KFTBUS&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;WERKS&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;MATNR&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;MENGE&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;MEINS&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;GSBER&quot;]=row[&quot;businessArea&quot;].ToString();&#xA;&#x9;&#x9;&#x9;drUpload[&quot;SEGMENT&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;XREF1_HD&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;XREF2_HD&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;drUpload[&quot;BVTYP&quot;]=&quot;&quot;;&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;if(dtUpload.Columns.Contains(&quot;LongText&quot;) &amp;&amp; row.Table.Columns.Contains(&quot;LongText&quot;) )&#xA;&#x9;&#x9;&#x9;{&#xA;&#x9;&#x9;&#x9;&#x9;drUpload[&quot;LongText&quot;]=row[&quot;LongText&quot;].ToString();&#xA;&#x9;&#x9;&#x9;}&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;dtUpload.Rows.Add(drUpload);&#xA;&#x9;&#x9;&#x9;index++;&#xA;&#x9;&#x9;}&#xA;&#x9;}else{&#xA;&#x9;&#x9;throw new Exception(&quot;can't find data Contract No &quot; + dr[&quot;Contract_no&quot;].ToString());&#xA;&#x9;}&#xA;&#x9;&#xA;}&#xA;catch(Exception ex)&#xA;{&#xA;&#x9;Console.WriteLine(ex.Message);&#xA;&#x9;throw new Exception(&quot;Genarate file &quot; + dr[&quot;Contract_no&quot;].ToString() + &quot; error &quot; + ex.Message);&#xA;}" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="478.6666666666667,165.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
                                     <ui:InvokeCode.Arguments>
                                       <InArgument x:TypeArguments="sd:DataTable" x:Key="dtPostingKey">
                                         <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">dtMasterPostingKey</CSharpValue>
@@ -751,7 +825,7 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </ui:InvokeCode>
-                                  <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" Encoding="UTF-8" sap:VirtualizedContainerService.HintSize="430.4,52.8" sap2010:WorkflowViewState.IdRef="WriteTextFile_1">
+                                  <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" Encoding="UTF-8" sap:VirtualizedContainerService.HintSize="478.6666666666667,54" sap2010:WorkflowViewState.IdRef="WriteTextFile_1">
                                     <ui:WriteTextFile.FileName>
                                       <InArgument x:TypeArguments="x:String">
                                         <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">strFileName + ".txt"</CSharpValue>
@@ -769,8 +843,32 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </ui:WriteTextFile>
+                                  <ui:OutputDataTable DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="478.6666666666667,82" sap2010:WorkflowViewState.IdRef="OutputDataTable_6">
+                                    <ui:OutputDataTable.DataTable>
+                                      <InArgument x:TypeArguments="sd:DataTable">
+                                        <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_92">dtDataUpload</CSharpValue>
+                                      </InArgument>
+                                    </ui:OutputDataTable.DataTable>
+                                    <ui:OutputDataTable.Text>
+                                      <OutArgument x:TypeArguments="x:String">
+                                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_31">strDebugdtData</CSharpReference>
+                                      </OutArgument>
+                                    </ui:OutputDataTable.Text>
+                                  </ui:OutputDataTable>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478.6666666666667,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_7">
+                                    <ui:LogMessage.Level>
+                                      <InArgument x:TypeArguments="ui:LogLevel">
+                                        <CSharpValue x:TypeArguments="ui:LogLevel" sap2010:WorkflowViewState.IdRef="CSharpValue`1_93">UiPath.Core.Activities.LogLevel.Info</CSharpValue>
+                                      </InArgument>
+                                    </ui:LogMessage.Level>
+                                    <ui:LogMessage.Message>
+                                      <InArgument x:TypeArguments="x:Object">
+                                        <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_94">"Log dtDataUpload :" + strDebugdtData</CSharpValue>
+                                      </InArgument>
+                                    </ui:LogMessage.Message>
+                                  </ui:LogMessage>
                                 </Sequence>
-                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke sqZFI05_UploadData workflow" sap:VirtualizedContainerService.HintSize="492.8,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Class\\sqZFI05_UploadData.xaml">
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke sqZFI05_UploadData workflow" sap:VirtualizedContainerService.HintSize="540.6666666666666,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Class\\sqZFI05_UploadData.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_FilePathUpload">
                                       <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22">strFileName + ".txt"</CSharpValue>
@@ -781,12 +879,12 @@
                                   </ui:InvokeWorkflowFile.Arguments>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:InvokeWorkflowFile>
-                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="492.8,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="540.6666666666666,54" sap2010:WorkflowViewState.IdRef="CommentOut_3">
                                   <ui:CommentOut.Body>
                                     <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,164.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
                                       <sap:WorkflowViewStateService.ViewState>
@@ -819,7 +917,7 @@
                               </Sequence>
                             </If.Then>
                             <If.Else>
-                              <Sequence DisplayName="not accept" sap:VirtualizedContainerService.HintSize="400,83.2" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                              <Sequence DisplayName="not accept" sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_18">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -913,7 +1011,7 @@
                         </Sequence>
                       </TryCatch.Try>
                       <TryCatch.Catches>
-                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="698.4,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="683.3333333333334,22" sap2010:WorkflowViewState.IdRef="Catch`1_2">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -924,13 +1022,13 @@
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                             </ActivityAction.Argument>
-                            <Sequence sap:VirtualizedContainerService.HintSize="400,620.8" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                            <Sequence sap:VirtualizedContainerService.HintSize="450,620" sap2010:WorkflowViewState.IdRef="Sequence_22">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ucas:ReadStatusbar MessageData="{x:Null}" MessageId="{x:Null}" MessageNumber="{x:Null}" MessageType="{x:Null}" ContinueOnError="True" DisplayName="Read Status Bar 'Statusbar  sbar'" sap:VirtualizedContainerService.HintSize="337.6,268" sap2010:WorkflowViewState.IdRef="ReadStatusbar_1">
+                              <ucas:ReadStatusbar MessageData="{x:Null}" MessageId="{x:Null}" MessageNumber="{x:Null}" MessageType="{x:Null}" ContinueOnError="True" DisplayName="Read Status Bar 'Statusbar  sbar'" sap:VirtualizedContainerService.HintSize="388,271.3333333333333" sap2010:WorkflowViewState.IdRef="ReadStatusbar_1">
                                 <ucas:ReadStatusbar.MessageText>
                                   <OutArgument x:TypeArguments="x:String">
                                     <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">strMessage</CSharpReference>
